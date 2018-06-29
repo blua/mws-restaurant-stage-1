@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+	<html lang="en">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
@@ -12,6 +13,7 @@
 
 <body>
   <header>
+		<a href="#neighborhoods-select" class="skip-link">Skip links inside map</a>
     <nav>
       <h1 id="title">Restaurant Reviews</h1>
     </nav>
@@ -24,7 +26,7 @@
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="-1">
           <option value="all">All Neighborhoods</option>
         </select>
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">

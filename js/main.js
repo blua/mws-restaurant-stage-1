@@ -32,6 +32,9 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
+	select.setAttribute('aria-role', 'listbox');
+	select.setAttribute('aria-multiselectable', false);
+	select.setAttribute('aria-label', 'Select neighborhood');
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
@@ -59,7 +62,9 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
-
+	select.setAttribute('aria-role', 'listbox');
+	select.setAttribute('aria-multiselectable', false);
+	select.setAttribute('aria-label', 'Select cuisine');
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
@@ -179,6 +184,8 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+	more.setAttribute('aria-role', 'button');
+	more.setAttribute('aria-label', restaurant.name);
   li.append(more)
 
   return li

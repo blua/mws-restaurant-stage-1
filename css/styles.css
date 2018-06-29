@@ -353,3 +353,18 @@ select:focus {
 	text-transform: uppercase;
 	font-size: xx-large;
 }
+
+a.skip-link {
+	position: absolute;
+	top: 0;
+	left: -200px;
+	background: #BF1722;
+	color: white;
+	padding: 8px;
+	z-index: 100;
+	visbility: hidden;
+}
+
+.skip-link:focus {
+	left: 0;
+}
