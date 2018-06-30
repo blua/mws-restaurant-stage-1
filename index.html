@@ -13,7 +13,7 @@
 
 <body>
   <header>
-		<a href="#neighborhoods-select" class="skip-link">Skip links inside map</a>
+		<a href="#neighborhoods-select" class="skip-link">Skip map</a>
     <nav>
       <h1 id="title">Restaurant Reviews</h1>
     </nav>
@@ -45,6 +45,14 @@
   <footer id="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
+
+	<script>
+	if('serviceWorker' in navigator) {
+	  navigator.serviceWorker
+	           .register('/sw.js')
+	           .then(function() { console.log("Service Worker Registered"); });
+	}
+	</script>
 
 </body>
 
